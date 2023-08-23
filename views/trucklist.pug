@@ -1,0 +1,34 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+form.row.g-3(name="truckform"  action="/api/regtruck" method="POST")
+table.table(style='margin-left: 20%; margin-right: 200px; margin-top: 60px')
+  thead.table-dark
+    tr
+      th(scope='col') firstname
+      th(scope='col') Lastname
+      th(scope='col') Age
+      th(scope='col') Email
+      th(scope='col') Telephone
+      th(scope='col') Gender
+      th(scope='col') ArrivalTime
+      th(scope='col') ExitTime
+      th(scope='col') ReceiptNumber
+      th(scope='col') Amount 
+      th(scope='col') Delete
+      th(scope='col') Edit
+  tbody
+    tr
+      th(scope='row') 1
+      td Mark
+      td Otto
+      td @mdo
+  tbody
+    tr
+      th(scope='row') 1
+      td Mark
+      td Otto
+      td @mdo

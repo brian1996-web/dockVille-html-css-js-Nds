@@ -1,0 +1,69 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='../css/signup.css')
+  title Create an Account
+section.section-cta
+  .container
+    .cta
+      .cta-text-box
+        p.heading-secondary Join Now
+      
+        form#formsignup.cta-form(name='truckform' method='POST' action='/api/truck/edit?id='+truck._id   onsubmit='return Validate(event);')
+          // action=# takes data to the backend
+          div
+            div
+              label(for='firstname') First Name 
+              input#firstname(type='text' name='firstname' placeholder='James' value=truck.firstname)
+              span#FnameError.organize
+            div
+              label(for='lastname') Last Name
+              input#Lastname(type='text' name='lastname' placeholder=' Milner' value=truck.lastname)
+              span#LnameError.organize
+            div
+              label(for='Age') Age
+              input#Age(type='text' name='Age' placeholder=' 'value=truck.Age)
+              span#AgeError.organize
+          
+            div
+              label(for='Email') E-mail
+              input#email(type='text' name='Email' placeholder='XXX@mail.com' value=truck.Email)
+              span#emailError.organize
+            div
+              label(for='Telephone') Telephone
+              input#phonenumber(name='Telephone' type='Telephone' placeholder='+256' value=truck.Telephone)
+              span#TelephoneError.organize
+
+             
+            div 
+              label(for='Gender') Gender
+              input#gender(type="text", name="Gender", placeholder="" value=truck.Gender)
+              span#GenderError.organize
+         
+            div
+              label(for='ArrivalTime') ArrivalTime
+              input#ArrivalTime(type='ArrivalTime' name='ArrivalTime' placeholder='' value=truck.ArrivalTime)
+              span#ArrivalTime-error.organize
+            div
+              label(for='ExitTime') ExitTime
+              input#ExitTime(type='text' name='ExitTime' placeholder=' ' value=truck.ExitTime)
+              span#ExitTimeError.organize
+            div
+              label(for='ReceiptNumber') ReceiptNumber
+              input#Lastname(type='text' name='ReceiptNumber' placeholder=' ' value=truck.ReceiptNumber)
+              span#ReceiptNumberError.organize
+            div
+              label(for='Amount') Amount
+              input#Amount(type='text' name='Amount' placeholder=' ' value=truck.Amount)
+              span#AmountError.organize
+                 
+            
+          button.btn.btn--form(type='submit') Sign up
+          //- a.btn.btn--outline(href='loginPage.html') Login &darr; 
+          // &darr;
+      .cta-img-box(role='img' aria-label='Woman enjoying food')
+
+
+script(src='../js/registervalidation.js')
